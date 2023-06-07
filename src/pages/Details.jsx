@@ -1,11 +1,7 @@
-import { useEffect, useState } from "react";
-import Movie from "../components/Movie";
-import Navbar from "../components/Navbar";
+import axios from "axios";
+import { useEffect, useState, useParams } from "react";
+
 
 export default function Details(){
-   return(
-    <>
-    <Navbar/>
-   <Movie/>
-   </>)
+
 }
