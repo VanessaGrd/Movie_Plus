@@ -20,11 +20,13 @@ export default function Details(){
 return(
    <>
 <Navbar/>
+<div className={styles.movieContainer}>
  <h1>{movieDetails.original_title}</h1>
  <div className={styles.poster}>{movieDetails.poster_path ? (
         
         <img className={styles.picturePoster} src={`${url}${movieDetails.poster_path}`} alt={movieDetails.orginal_title} />
       ) : null}</div>
-<p>{movieDetails.overview}</p> </>
+<p>{movieDetails.overview}</p> 
+</div></>
 )
 }

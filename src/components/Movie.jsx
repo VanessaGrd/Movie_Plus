@@ -7,17 +7,15 @@ export default function Movie({ movie }) {
   if (movie)
     return (
       <div>
-        <h2>{movie.original_title}</h2>
-        {movie.poster_path ? (
-        
-          <img className={styles.picturePoster} src={`${url}${movie.poster_path}`} alt={movie.orginal_title} />
-        ) : null}
-        <h3>{movie.release_date}</h3>
         <Link key={movie.id} to={`/movie/${movie.id}`}>
-          <button className={styles.buttonMovieCard} type="button">
-            Détails
-          </button>
-        </Link>
+          {movie.poster_path ? (
+            <img
+              className={styles.picturePoster}
+              src={`${url}${movie.poster_path}`}
+              alt={movie.orginal_title}
+            />
+          ) : null}
+        </Link>{" "}
       </div>
     );
   return null;

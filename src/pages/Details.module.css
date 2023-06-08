@@ -1,4 +1,13 @@
-.poster img{
-    width: 20vw;
-    height: 50vh;
+*{
+    margin: 0;
+    padding: 0;
+}
+.movieContainer{
+    width: 50vw;
+    height: auto;
+    background-color: red;
+}
+
+.movieContainer img{
+    height: 100px;
 }

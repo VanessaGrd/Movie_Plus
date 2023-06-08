@@ -12,27 +12,39 @@ export default function MoviesList() {
       .then((res) => res.json())
       .then((data) => setMovie(data.results))
       .catch((error) => console.error("Une erreur s'est produite", error));
-    }, []);;
+  }, []);
 
-  const filterReleaseDate = ()=>{
-    const releaseDateMovie = [...movie].sort((a,b) => a.release_date.localeCompare(b.release_date));
+  const filterReleaseDate = () => {
+    const releaseDateMovie = [...movie].sort((a, b) =>
+      a.release_date.localeCompare(b.release_date)
+    );
     setMovie(releaseDateMovie);
   };
-  const filterReleaseDateInverse =() =>{
-    const releaseDateMovieInverse = [...movie].sort((a,b) => b.release_date.localeCompare(a.release_date));
+  const filterReleaseDateInverse = () => {
+    const releaseDateMovieInverse = [...movie].sort((a, b) =>
+      b.release_date.localeCompare(a.release_date)
+    );
     setMovie(releaseDateMovieInverse);
-  }
+  };
 
   return (
     <>
-      <div>
-        <h1>Movielist</h1>
+      <div className={styles.moviesPage}>
+        {" "}
+        <div className={styles.buttonContainer}>
+        <button onClick={filterReleaseDate} type="submit">
+          Release date ⬇️
+        </button>
+        <button onClick={filterReleaseDateInverse} type="submit">
+          Release date ⬆️
+        </button>
+        </div>
         <div className={styles.moviesContainer}>
-        {movie.map((movie) => (
-          <Movie movie={movie} key={movie.id} />
-        ))}</div>
-<button onClick={filterReleaseDate} type="submit">Du plus vieux au plus récent</button>
-<button onClick={filterReleaseDateInverse} type="submit">Du plus récent au plus vieux</button>
+          {movie.map((movie) => (
+            <Movie movie={movie} key={movie.id} />
+          ))}
+        </div>
+    
       </div>
     </>
   );

@@ -7,7 +7,8 @@ export default function Navbar(){
     return(
         <header>
         <nav className={styles.navBar}>
-          <ul>
+        <h1>Movie+</h1>
+          <ul className={styles.links}>
             <li>
               <NavLink to="/">Home </NavLink>
             </li>
