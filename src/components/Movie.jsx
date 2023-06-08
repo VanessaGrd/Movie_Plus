@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Movie({ movie }) {
   const url = "https://image.tmdb.org/t/p/original";
+
   if (movie)
     return (
       <div>
