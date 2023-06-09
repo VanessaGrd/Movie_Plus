@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./MoviesList.module.css";
 import Movie from "./Movie";
-
+import MovieReference from "./MovieReference";
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
 export default function MoviesList() {
@@ -32,19 +32,19 @@ export default function MoviesList() {
       <div className={styles.moviesPage}>
         {" "}
         <div className={styles.buttonContainer}>
-        <button onClick={filterReleaseDate} type="submit">
-          Release date ⬇️
-        </button>
-        <button onClick={filterReleaseDateInverse} type="submit">
-          Release date ⬆️
-        </button>
+          <button onClick={filterReleaseDate} type="submit">
+            Release date ⬇️
+          </button>
+          <button onClick={filterReleaseDateInverse} type="submit">
+            Release date ⬆️
+          </button>
         </div>
         <div className={styles.moviesContainer}>
           {movie.map((movie) => (
             <Movie movie={movie} key={movie.id} />
           ))}
         </div>
-    
+        
       </div>
     </>
   );

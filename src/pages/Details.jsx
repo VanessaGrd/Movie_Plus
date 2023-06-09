@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Details.module.css";
-import Navbar
- from "../components/Navbar";
+import Navbar from "../components/Navbar";
+import MovieReference from "../components/MovieReference";
+
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
-export default function Details(){
-  const {id} = useParams();
+export default function Details() {
+  const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState([]);
+
   const url = "https://image.tmdb.org/t/p/original";
 
   useEffect(() => {
@@ -17,16 +19,27 @@ export default function Details(){
   }, []);
   if (!movieDetails) return null;
 
-return(
-   <>
-<Navbar/>
-<div className={styles.movieContainer}>
- <h1>{movieDetails.original_title}</h1>
- <div className={styles.poster}>{movieDetails.poster_path ? (
-        
-        <img className={styles.picturePoster} src={`${url}${movieDetails.poster_path}`} alt={movieDetails.orginal_title} />
-      ) : null}</div>
-<p>{movieDetails.overview}</p> 
-</div></>
-)
+  return (
+    <>
+      <Navbar />
+   x
+      <div className={styles.movieContainer}>
+        <h1>{movieDetails.original_title}</h1>
+        <div className={styles.poster}>
+          {movieDetails.poster_path ? (
+            <img
+              className={styles.picturePoster}
+              src={`${url}${movieDetails.poster_path}`}
+              alt={movieDetails.orginal_title}
+            />
+          ) : null}
+        </div>
+        <p>{movieDetails.overview}</p>
+      </div>
+      <MovieReference/>
+
+
+    </>
+  
+  );
 }

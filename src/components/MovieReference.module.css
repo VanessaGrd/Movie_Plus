@@ -1,0 +1,10 @@
+.referencePoster img{
+    width: 20vw;
+    height: 50vh;
+    margin: 10px;
+}
+
+.referenceContainer{
+    display: flex;
+    flex-direction: row;
+}

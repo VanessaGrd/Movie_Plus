@@ -1,6 +1,8 @@
 import styles from "./Movie.module.css";
 import { Link } from "react-router-dom";
 
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+
 export default function Movie({ movie }) {
   const url = "https://image.tmdb.org/t/p/original";
 

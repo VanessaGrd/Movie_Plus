@@ -5,9 +5,9 @@
 .movieContainer{
     width: 50vw;
     height: auto;
-    background-color: red;
 }
 
 .movieContainer img{
     height: 100px;
 }
+
