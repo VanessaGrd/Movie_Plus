@@ -32,11 +32,11 @@ export default function MoviesList() {
       <div className={styles.moviesPage}>
         {" "}
         <div className={styles.buttonContainer}>
-          <button onClick={filterReleaseDate} type="submit">
-            Release date ⬇️
+          <button className={styles.button} onClick={filterReleaseDate} type="submit">
+            Release date ⇣
           </button>
-          <button onClick={filterReleaseDateInverse} type="submit">
-            Release date ⬆️
+          <button className={styles.button} onClick={filterReleaseDateInverse} type="submit">
+            Release date ⇡
           </button>
         </div>
         <div className={styles.moviesContainer}>

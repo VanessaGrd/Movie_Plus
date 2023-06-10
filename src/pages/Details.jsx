@@ -22,9 +22,10 @@ export default function Details() {
   return (
     <>
       <Navbar />
-   x
+   
       <div className={styles.movieContainer}>
         <h1>{movieDetails.original_title}</h1>
+        <div className={styles.movieDetailsContainer}>
         <div className={styles.poster}>
           {movieDetails.poster_path ? (
             <img
@@ -35,6 +36,7 @@ export default function Details() {
           ) : null}
         </div>
         <p>{movieDetails.overview}</p>
+        </div>
       </div>
       <MovieReference/>
 

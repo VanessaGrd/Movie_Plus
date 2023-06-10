@@ -5,9 +5,39 @@
 .movieContainer{
     width: 50vw;
     height: auto;
-}
+    margin: 20px;
+    border-radius: 10px;
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 6px 4px 4px rgb(107, 99, 99);
+
+    }
 
 .movieContainer img{
-    height: 100px;
+    height: 50vh;
+margin-top: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 
+.movieContainer h1{
+    font-size: 2rem;
+    color: white;
+    box-shadow: 6px 4px 4px rgb(107, 99, 99);
+background-color: black;
+text-align: center;
+border-top-left-radius : 5px;
+border-top-right-radius : 5px
+}
+
+.movieDetailsContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.movieDetailsContainer p{
+    margin-top: 10px;
+    height: 50vh;
+    font-size: 1.2rem;
+}

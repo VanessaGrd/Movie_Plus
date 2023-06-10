@@ -19,7 +19,8 @@ export default function MovieReference() {
   }, []);
 
   return (
-    <div className={styles.referenceContainer}>
+    <div className={styles.referenceContainer}> 
+    <h2>Suggestion</h2>
       {movieReference.map((movie) => (
         <div key={movie.id}>
           <div className={styles.referencePoster}>

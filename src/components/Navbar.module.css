@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap');*{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat Alternates', sans-serif;}
@@ -13,6 +12,7 @@ align-items: center;
 justify-content: space-between;
 list-style: none;
 margin-bottom: 40px;
+margin-top: 20px;
 
 }
 
@@ -28,18 +28,31 @@ margin-bottom: 40px;
 }
 
 .navBar ul li a{
-    color: #eacda3;
+    color: black;
+    font-weight: 900;
     text-decoration: none;
     font-size: 1.4rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0 ;
+    
 }
-.navBar h1{
-border-radius: 10px;
-padding: 10px;
-font-size: 2.3rem; 
-width: auto;
-color: #eacda3;
-letter-spacing: 3px;
-text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-margin-top: 20px;
+.navBar ul li a:after{
+  content:"";
+    position : absolute;
+    background-color: black;
+    height: 3px;
+    width: 0%;
+    left:0;
+    bottom: -10px;
+    transition: 0.3s;
+}
 
-        }
+.navBar ul li a:hover{
+color: black
+}
+
+.navBar ul li a:hover:after{
+    width:100%;
+
+  }
