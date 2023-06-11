@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./MoviesList.module.css";
 import Movie from "./Movie";
-import MovieReference from "./MovieReference";
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
 export default function MoviesList() {

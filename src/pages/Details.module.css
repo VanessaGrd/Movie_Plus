@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-.movieContainer{
+
+/* movie Container*/
+.movieDetail{
     width: 50vw;
     height: auto;
     margin: 20px;
@@ -14,13 +16,19 @@
 
     }
 
+    .movieContainer{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+    }
+
 .movieContainer img{
-    height: 50vh;
-margin-top: 5px;
+width:18vw;
+height: auto;
+padding-top: 5px;
     margin-right: 10px;
     border-radius: 5px;
 }
-
 .movieContainer h1{
     font-size: 2rem;
     color: white;
@@ -40,4 +48,57 @@ border-top-right-radius : 5px
     margin-top: 10px;
     height: 50vh;
     font-size: 1.2rem;
+}
+.informations{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 10px;
+    color: black;
+}
+.bottomDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+}
+@media screen and (max-width:700px) {
+    .movieContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    .movieDetail{
+       width: 90vw;
+    }
+    .movieDetailsContainer p{
+    
+        font-size: 1rem;
+    }
+    .movieDetailsContainer{
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        padding-right: 10px;
+       
+    }
+    .movieContainer img{
+        width:40vw;
+
+        }
+        .movieContainer h1{
+            width: 90vw;
+            font-size: 1.4rem;
+           
+        }
+        .bottomDetails{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 350px;
+            
+        }
+        .bottomDetails h3{
+            font-size: 1rem;
+        }
 }

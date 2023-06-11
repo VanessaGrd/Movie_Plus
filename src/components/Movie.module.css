@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+
 .picturePoster{
     height: 50vh;
 width: 300px;
+}
+
+
+.rate{
+    color: white;
+    background-color: black ;
+    width: 20%;
+    border-radius: 5px;
 }

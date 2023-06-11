@@ -1,0 +1,14 @@
+.aboutContainer{
+    width: 70%;
+    color: black;
+    font-size: 1.2rem;
+    position: absolute;
+    padding: 10px;
+    top: 200px;
+    left: 200px;
+    border-radius: 10px;
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 6px 4px 4px rgb(107, 99, 99);
+}

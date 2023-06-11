@@ -15,15 +15,17 @@ export default function Details() {
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
       .then((res) => res.json())
-      .then((data) => setMovieDetails(data));
+      .then((data) => setMovieDetails(data))
+      .catch((error) => console.error("Une erreur s'est produite", error));
   }, []);
   if (!movieDetails) return null;
 
   return (
     <>
-      <Navbar />
-   
+            <Navbar/>
+
       <div className={styles.movieContainer}>
+        <div className={styles.movieDetail}>
         <h1>{movieDetails.original_title}</h1>
         <div className={styles.movieDetailsContainer}>
         <div className={styles.poster}>
@@ -35,10 +37,19 @@ export default function Details() {
             />
           ) : null}
         </div>
+        <div className={styles.informations}>
         <p>{movieDetails.overview}</p>
+        <div className={styles.bottomDetails}>
+        <h3 className={styles.rate}>⭐{movieDetails.vote_average}</h3>
+        <h3>Release date : {movieDetails.release_date}</h3>
         </div>
-      </div>
+        
+        </div>
+        </div>
+        </div>
+    
       <MovieReference/>
+      </div>
 
 
     </>
