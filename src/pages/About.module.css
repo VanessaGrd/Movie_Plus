@@ -12,3 +12,8 @@
     background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     box-shadow: 6px 4px 4px rgb(107, 99, 99);
 }
+
+.poster img{
+    overflow: hidden;
+    width: 100vw;
+}
