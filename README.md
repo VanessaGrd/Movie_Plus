@@ -18,7 +18,7 @@ Ajout d'un système de rating:
 Un utilisateur peut ajouter une note sur chaque film.
 
 
-Note : Concernant le bonus (notation) , je n'ai pu aller au bout pour 2 raisons : 
+**Note : Concernant le bonus (notation) , je n'ai pu aller au bout pour 2 raisons : 
 * lorsque je fais appel à l'API (POST), cela m'indique que je n'ai pas l'autorisation nécessaire (alors que pour GET aucun problème),
 * parce que nous sommes dans les débuts de l'apprentissage des requêtes POST, PUT,... et que je dois donc encore m'améliorer sur ce point. 
 Comme vous le verrez, j'ai quand même mis le début du code dans le composant "Rate.jsx".
