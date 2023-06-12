@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import styles from "./Details.module.css";
 import Navbar from "../components/Navbar";
 import MovieReference from "../components/MovieReference";
+import Rate from "../components/Rate";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
@@ -22,37 +23,34 @@ export default function Details() {
 
   return (
     <>
-            <Navbar/>
+      <Navbar />
 
       <div className={styles.movieContainer}>
         <div className={styles.movieDetail}>
-        <h1>{movieDetails.original_title}</h1>
-        <div className={styles.movieDetailsContainer}>
-        <div className={styles.poster}>
-          {movieDetails.poster_path ? (
-            <img
-              className={styles.picturePoster}
-              src={`${url}${movieDetails.poster_path}`}
-              alt={movieDetails.orginal_title}
-            />
-          ) : null}
+          <h1>{movieDetails.original_title}</h1>
+          <div className={styles.movieDetailsContainer}>
+            <div className={styles.poster}>
+              {movieDetails.poster_path ? (
+                <img
+                  className={styles.picturePoster}
+                  src={`${url}${movieDetails.poster_path}`}
+                  alt={movieDetails.orginal_title}
+                />
+              ) : null}
+            </div>
+            <div className={styles.informations}>
+              <p>{movieDetails.overview}</p>
+              <div className={styles.bottomDetails}>
+                <h3 className={styles.rate}>⭐{movieDetails.vote_average}</h3>
+                <h3>Release date : {movieDetails.release_date}</h3>
+                <Rate />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className={styles.informations}>
-        <p>{movieDetails.overview}</p>
-        <div className={styles.bottomDetails}>
-        <h3 className={styles.rate}>⭐{movieDetails.vote_average}</h3>
-        <h3>Release date : {movieDetails.release_date}</h3>
-        </div>
-        
-        </div>
-        </div>
-        </div>
-    
-      <MovieReference/>
+
+        <MovieReference />
       </div>
-
-
     </>
-  
   );
 }

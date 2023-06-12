@@ -5,7 +5,7 @@
     justify-content: space-between;
 }
 .aboutContainer{
-    width: 50%;
+    width: 60%;
     color: black;
     font-size: 1.2rem;
     padding: 10px;
@@ -16,9 +16,8 @@
 
 .aboutbody img{
     overflow: hidden;
-    width: 50vw;
-    max-width: 50vw;
-    max-height: 100vh;
+width: auto;
+height: 100vh;
 
 }
 

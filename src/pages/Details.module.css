@@ -8,6 +8,7 @@
     width: 60vw;
     height: auto;
     margin: 20px;
+    position: relative;
     border-radius: 10px;
     background: #abbaab;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
@@ -55,12 +56,15 @@ border-top-right-radius : 5px
     align-items: end;
     padding-right: 10px;
     color: black;
+    width: 68%;
 }
+
+
 .bottomDetails{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 750px;
+    width: 100%;
 }
 @media screen and (max-width:700px) {
     .movieContainer{
@@ -91,9 +95,12 @@ border-top-right-radius : 5px
             font-size: 1.4rem;
            
         }
+        .informations{
+            width: 100%;
+        }
         .bottomDetails{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-around;
             width: 350px;
             
@@ -102,10 +109,5 @@ border-top-right-radius : 5px
             font-size: 1rem;
         }
 
-        .isFavorite {
-            width: 40px;
-            height: 40px;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg');
-            background-size: 100%;
-          }
+
 }

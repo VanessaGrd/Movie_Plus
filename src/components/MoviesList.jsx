@@ -31,10 +31,18 @@ export default function MoviesList() {
       <div className={styles.moviesPage}>
         {" "}
         <div className={styles.buttonContainer}>
-          <button className={styles.button} onClick={filterReleaseDate} type="submit">
+          <button
+            className={styles.button}
+            onClick={filterReleaseDate}
+            type="submit"
+          >
             Release date ⇣
           </button>
-          <button className={styles.button} onClick={filterReleaseDateInverse} type="submit">
+          <button
+            className={styles.button}
+            onClick={filterReleaseDateInverse}
+            type="submit"
+          >
             Release date ⇡
           </button>
         </div>
@@ -43,7 +51,6 @@ export default function MoviesList() {
             <Movie movie={movie} key={movie.id} />
           ))}
         </div>
-        
       </div>
     </>
   );

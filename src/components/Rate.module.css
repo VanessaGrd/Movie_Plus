@@ -1,0 +1,25 @@
+
+.starsContainer{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+}
+
+
+.stars{
+    display: flex;
+    flex-direction: row;
+
+}
+.stars div{
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+@media screen and (max-width : 1160px){
+    .starsContainer{
+        display: flex;
+        flex-direction: column;
+    }
+}
