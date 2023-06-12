@@ -1,19 +1,45 @@
+
+.aboutbody{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .aboutContainer{
-    width: 70%;
+    width: 50%;
     color: black;
     font-size: 1.2rem;
-    position: absolute;
     padding: 10px;
-    top: 200px;
-    left: 200px;
     border-radius: 10px;
-    background: #abbaab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    box-shadow: 6px 4px 4px rgb(107, 99, 99);
+    margin-top: 100px;
+
 }
 
-.poster img{
+.aboutbody img{
     overflow: hidden;
-    width: 100vw;
+    width: 50vw;
+    max-width: 50vw;
+    max-height: 100vh;
+
+}
+
+@media screen and (max-width: 700px) {
+    .navbarAbout{
+        position: absolute;
+        top : 0
+    }
+
+    .aboutContainer{
+        font-size: 1rem;
+        padding: 10px;
+    width: 80%;
+    }
+    .aboutbody{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+    
+    }
+    
 }

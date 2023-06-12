@@ -38,14 +38,15 @@ export default function About() {
   if (!movie) return null;
   return (
     <>
+    <div className={styles.navbarAbout}>
       <Navbar />
-      <div className={styles.poster}>
+      </div>
+      <div className={styles.aboutbody} >
       <img
               className={styles.picturePoster}
               src={`${url}${movie.poster_path}`}
               alt={movie.orginal_title}
             />
-            </div>
       <div className={styles.aboutContainer}>
         <h2> Welcome to Movie+ !</h2> <br></br>
         <p>
@@ -65,6 +66,7 @@ export default function About() {
           classics.<br></br> <br></br>
           Good viewing !
         </p>
+      </div>
       </div>
     </>
   );
